@@ -23,4 +23,15 @@ In this example, the calibration values of these four lines are 12, 38, 15, and 
 
 Consider your entire calibration document. What is the sum of all of the calibration values?
 """
+import re
 
+calibrationTotal = 0
+
+with open("Day1_Input.txt") as file:
+    for line in file:
+        lineInts = re.sub("[^\d\.]", "", line)
+        calibrationStr = lineInts[0] + lineInts[-1]
+        calibrationInt = int(calibrationStr)
+        calibrationTotal += calibrationInt
+
+print(calibrationTotal)
