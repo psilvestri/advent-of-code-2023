@@ -1,0 +1,2 @@
+# Ignore input files since AOC doesn't want them visible publicly
+*_input.txt
